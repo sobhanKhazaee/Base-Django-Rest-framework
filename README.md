@@ -12,16 +12,19 @@
 ## راه‌اندازی پروژه
 
 1. پروژه را از گیت‌هاب کلون کنید:
-```bash
+``bash
    git clone https://github.com/your-username/Base-Django-Rest-framework.git
+
+``bash
    cd Base-Django-Rest-framework
+
 مطمئن شوید که Docker و Docker Compose روی سیستم شما نصب شده است.
 
 برای ساخت و راه‌اندازی پروژه با Docker، از دستور زیر استفاده کنید:
 
 
 content_copy
-bash
+``bash
    docker-compose up --build
 این دستور Docker Compose کانتینرهای لازم برای پروژه شامل سرویس‌های Django، Celery، Redis و PostgreSQL را می‌سازد و راه‌اندازی می‌کند.
 
@@ -38,7 +41,7 @@ urls.py: تنظیمات URL‌ها برای Swagger و API‌ها
 پس از راه‌اندازی موفقیت‌آمیز سرویس‌ها، باید دیتابیس‌ها را مایگریت کنید:
 
 content_copy
-bash
+``bash
   docker-compose exec django python manage.py migrate
 برای اضافه کردن اپلیکیشن‌ها یا تنظیمات بیشتر، می‌توانید تنظیمات پروژه را در فایل‌های مختلف تغییر دهید.
 مجوز
