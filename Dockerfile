@@ -1,16 +1,10 @@
-# از تصویر پایه Python استفاده می‌کنیم
 FROM python:3.11-slim
-
-# تنظیمات کاری پوشه
 WORKDIR /app
-
-# کپی کردن فایل requirements.txt به کانتینر
 COPY requirements.txt .
 
-# نصب پکیج‌ها از فایل requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
 
-# کپی کردن تمامی فایل‌های پروژه به کانتینر
+RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt
 COPY . .
 
 # ست کردن متغیر محیطی برای اجرای Django
