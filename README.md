@@ -11,15 +11,31 @@
 
 ## راه‌اندازی پروژه
 
-1. پروژه را از گیت‌هاب کلون کنید:
+# 1. Clone کردن repository فعلی
 ```
-   git clone https://github.com/your-username/Base-Django-Rest-framework.git
+git clone https://github.com/sobhanKhazaee/Base-Django-Rest-framework.git
+```
+```
+cd Base-Django-Rest-framework
 ```
 
+# 2. حذف remote قبلی
 ```
-   cd Base-Django-Rest-framework
+git remote remove origin
 ```
 
+# 3. ایجاد یک repository جدید در GitHub
+# (از طریق وب‌سایت GitHub یک repo جدید بسازید)
+
+# 4. اضافه کردن remote جدید
+```
+git remote add origin https://github.com/YOUR_USERNAME/NEW_REPO_NAME.git
+```
+
+# 5. Push کردن تمام branch‌ها
+```
+git push -u origin main
+```
 مطمئن شوید که Docker و Docker Compose روی سیستم شما نصب شده است.
 
 برای ساخت و راه‌اندازی پروژه با Docker، از دستور زیر استفاده کنید:
